@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "wtfb"
+version = "0.1.0"
+description = ""
+authors = ["Todd York <tjysunset@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+"fake-bpy-module-4.0" = "^20231118"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
