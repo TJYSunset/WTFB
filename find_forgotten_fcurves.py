@@ -31,5 +31,4 @@ class FindForgottenFcurvesOperator(bpy.types.Operator):
 
     def execute(self, context):
         main(context)
-        self.report
         return {'FINISHED'}
