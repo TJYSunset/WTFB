@@ -38,7 +38,11 @@ class CleanConstantChannelsOperator(bpy.types.Operator):
 
     @classmethod
     def poll(cls, context):
-        return bpy.context.active_object.animation_data.action.fcurves is not None
+        try:
+            return bpy.context.active_object.animation_data.action.fcurves is not None
+        except Exception as ex:
+            print(f"{cls}: poll() error: {repr(ex)}")
+            return False
 
     def execute(self, context):
         main(context, self.threshold, self.hide, self.keep_time)

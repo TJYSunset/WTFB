@@ -31,7 +31,11 @@ class SelectRightBezierHandlesOperator(bpy.types.Operator):
 
     @classmethod
     def poll(cls, context):
-        return context.selected_editable_fcurves is not None
+        try:
+            return context.selected_editable_fcurves is not None
+        except Exception as ex:
+            print(f"{cls}: poll() error: {repr(ex)}")
+            return False
 
     def execute(self, context):
         main(context, False)
