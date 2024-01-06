@@ -25,3 +25,7 @@ Find Forgotten F-Curves:: List channels that contain more than one keyframe, but
 Normalize Quaternion Rotation:: Normalize quaternion rotations for selected bones in pose mode (doesn't affect animation keyframes).
 Reset Bezier Handles:: For all selected channels, set all bezier keyframes to a horizontal 2-frame-wide "aligned" keyframe.
 Select Left/Right Bezier Handles:: Select all left/right handles of visible bezier keyframes.
+
+=== Misc
+
+Toggle Viewport Focal Length:: Toggle active viewport focal length between 35mm and 50mm.

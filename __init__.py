@@ -7,6 +7,7 @@ from .normalize_quaternion_rotation import NormalizeQuaternionRotationOperator
 from .reset_bezier_handles import ResetBezierHandlesOperator
 from .select_bezier_handles import (SelectLeftBezierHandlesOperator,
                                     SelectRightBezierHandlesOperator)
+from .toggle_viewport_focal_length import ToggleViewportFocalLengthOperator
 
 bl_info = {
     "name": "WTFB",
@@ -28,6 +29,7 @@ def register():
     bpy.utils.register_class(ResetBezierHandlesOperator)
     bpy.utils.register_class(SelectLeftBezierHandlesOperator)
     bpy.utils.register_class(SelectRightBezierHandlesOperator)
+    bpy.utils.register_class(ToggleViewportFocalLengthOperator)
 
 def unregister():
     bpy.utils.unregister_class(AutoGroupChannelsOperator)
@@ -37,6 +39,7 @@ def unregister():
     bpy.utils.unregister_class(ResetBezierHandlesOperator)
     bpy.utils.unregister_class(SelectLeftBezierHandlesOperator)
     bpy.utils.unregister_class(SelectRightBezierHandlesOperator)
+    bpy.utils.unregister_class(ToggleViewportFocalLengthOperator)
 
 if __name__ == "__main__":
     register()
