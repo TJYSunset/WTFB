@@ -21,6 +21,7 @@ bl_info = {
     "category": "Tools",
 }
 
+
 def register():
     bpy.utils.register_class(AutoGroupChannelsOperator)
     bpy.utils.register_class(CleanConstantChannelsOperator)
@@ -31,6 +32,7 @@ def register():
     bpy.utils.register_class(SelectRightBezierHandlesOperator)
     bpy.utils.register_class(ToggleViewportFocalLengthOperator)
 
+
 def unregister():
     bpy.utils.unregister_class(AutoGroupChannelsOperator)
     bpy.utils.unregister_class(CleanConstantChannelsOperator)
@@ -40,6 +42,7 @@ def unregister():
     bpy.utils.unregister_class(SelectLeftBezierHandlesOperator)
     bpy.utils.unregister_class(SelectRightBezierHandlesOperator)
     bpy.utils.unregister_class(ToggleViewportFocalLengthOperator)
+
 
 if __name__ == "__main__":
     register()

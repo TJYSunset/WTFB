@@ -1,5 +1,6 @@
 import bpy
 
+
 def main(context):
     # The docs for `bpy.types.Area` claims that the first space is the active space,
     # so no need to loop through all spaces
@@ -9,11 +10,13 @@ def main(context):
     space.lens = new_focal_length
     return (old_focal_length, new_focal_length)
 
+
 class ToggleViewportFocalLengthOperator(bpy.types.Operator):
     """Toggles viewport focal length between 35mm and 50mm"""
+
     bl_idname = "view3d.wtfb_toggle_viewport_focal_length"
     bl_label = "Toggle Viewport Focal Length"
-    bl_options = {'REGISTER'}
+    bl_options = {"REGISTER"}
 
     @classmethod
     def poll(cls, context):
@@ -25,5 +28,8 @@ class ToggleViewportFocalLengthOperator(bpy.types.Operator):
 
     def execute(self, context):
         (old_focal_length, new_focal_length) = main(context)
-        self.report({"INFO"}, f"Focal length changed from {old_focal_length}mm to {new_focal_length}mm")
-        return {'FINISHED'}
+        self.report(
+            {"INFO"},
+            f"Focal length changed from {old_focal_length}mm to {new_focal_length}mm",
+        )
+        return {"FINISHED"}
