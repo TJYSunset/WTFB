@@ -1,4 +1,14 @@
+import importlib
+import sys
+
 import bpy
+
+# hot reload
+current_package_prefix = f"{__name__}."
+for name, module in sys.modules.copy().items():
+    if name.startswith(current_package_prefix):
+        print(f"Reloading {name}")
+        importlib.reload(module)
 
 from .auto_group_channels import AutoGroupChannelsOperator
 from .clean_constant_channels import CleanConstantChannelsOperator
