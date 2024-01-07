@@ -8,9 +8,16 @@ Various personal tools for Blender.
 
 http://github.com/tjysunset/WTFB/archive/main.zip[Download from the top-right green button].
 
-Find the operators with btn:[F3]. They are not added to any GUI menus.
+== Save History
 
-== List of operators
+Automatically insert a dummy _Undo History_ entry whenever you save.
+Useful for quickly reverting to your last save point.
+
+Disabled by default; Enable in addon preferences.
+
+== Operators
+
+Find the operators with btn:[F3]. They are not added to any GUI menus.
 
 === Animation
 
