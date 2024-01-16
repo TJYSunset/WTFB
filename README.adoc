@@ -45,5 +45,6 @@ No, that crap ignores vertices not influenced by the target group.
 
 === Misc
 
+Toggle Rest Position:: Toggle rest position for all armatures in scene. Note this action is not undoable outside of object mode, i.e. not undoable in its intended use case, but you could always toggle it again.
 Toggle Viewport Focal Length:: Toggle active viewport focal length between 35mm and 50mm.
 Toggle Viewport Shading:: Toggle active viewport shading between MatCap and flat + shadows + curvature.

@@ -22,6 +22,7 @@ from .select_bezier_handles import (
     SelectLeftBezierHandlesOperator,
     SelectRightBezierHandlesOperator,
 )
+from .toggle_rest_position import ToggleRestPositionOperator
 from .toggle_viewport_focal_length import ToggleViewportFocalLengthOperator
 from .toggle_viewport_shading import ToggleViewportShadingOperator
 
@@ -73,6 +74,7 @@ def register():
     bpy.utils.register_class(ResetBezierHandlesOperator)
     bpy.utils.register_class(SelectLeftBezierHandlesOperator)
     bpy.utils.register_class(SelectRightBezierHandlesOperator)
+    bpy.utils.register_class(ToggleRestPositionOperator)
     bpy.utils.register_class(ToggleViewportFocalLengthOperator)
     bpy.utils.register_class(ToggleViewportShadingOperator)
 
@@ -93,6 +95,7 @@ def unregister():
     bpy.utils.unregister_class(ResetBezierHandlesOperator)
     bpy.utils.unregister_class(SelectLeftBezierHandlesOperator)
     bpy.utils.unregister_class(SelectRightBezierHandlesOperator)
+    bpy.utils.unregister_class(ToggleRestPositionOperator)
     bpy.utils.unregister_class(ToggleViewportFocalLengthOperator)
     bpy.utils.unregister_class(ToggleViewportShadingOperator)
 
