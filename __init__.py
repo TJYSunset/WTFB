@@ -11,6 +11,7 @@ for name, module in sys.modules.copy().items():
         importlib.reload(module)
 
 from .auto_group_channels import AutoGroupChannelsOperator
+from .average_vertex_weights import AverageVertexWeightsOperator
 from .clean_constant_channels import CleanConstantChannelsOperator
 from .find_forgotten_fcurves import FindForgottenFcurvesOperator
 from .normalize_quaternion_rotation import NormalizeQuaternionRotationOperator
@@ -63,6 +64,7 @@ def register():
     bpy.utils.register_class(Preferences)
 
     bpy.utils.register_class(AutoGroupChannelsOperator)
+    bpy.utils.register_class(AverageVertexWeightsOperator)
     bpy.utils.register_class(CleanConstantChannelsOperator)
     bpy.utils.register_class(FindForgottenFcurvesOperator)
     bpy.utils.register_class(NormalizeQuaternionRotationOperator)
@@ -81,6 +83,7 @@ def unregister():
     bpy.utils.unregister_class(Preferences)
 
     bpy.utils.unregister_class(AutoGroupChannelsOperator)
+    bpy.utils.unregister_class(AverageVertexWeightsOperator)
     bpy.utils.unregister_class(CleanConstantChannelsOperator)
     bpy.utils.unregister_class(FindForgottenFcurvesOperator)
     bpy.utils.unregister_class(NormalizeQuaternionRotationOperator)

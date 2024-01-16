@@ -33,6 +33,10 @@ Normalize Quaternion Rotation:: Normalize quaternion rotations for selected bone
 Reset Bezier Handles:: For all selected channels, set all bezier keyframes to a horizontal 2-frame-wide "aligned" keyframe.
 Select Left/Right Bezier Handles:: Select all left/right handles of visible bezier keyframes.
 
+=== Mesh
+
+Average Vertex Weights:: Average unlocked vertex weights for selected vertices in the active object. Useful for fixing automatic/transferred deformation weights on rigid parts.
+
 === Misc
 
 Toggle Viewport Focal Length:: Toggle active viewport focal length between 35mm and 50mm.
