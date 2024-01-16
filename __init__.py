@@ -14,6 +14,7 @@ from .auto_group_channels import AutoGroupChannelsOperator
 from .average_vertex_weights import AverageVertexWeightsOperator
 from .clean_constant_channels import CleanConstantChannelsOperator
 from .find_forgotten_fcurves import FindForgottenFcurvesOperator
+from .move_vertex_weights import MoveVertexWeightsOperator
 from .normalize_quaternion_rotation import NormalizeQuaternionRotationOperator
 from .reset_bezier_handles import ResetBezierHandlesOperator
 from .save_history import save_history_register, save_history_try_unregister
@@ -67,6 +68,7 @@ def register():
     bpy.utils.register_class(AverageVertexWeightsOperator)
     bpy.utils.register_class(CleanConstantChannelsOperator)
     bpy.utils.register_class(FindForgottenFcurvesOperator)
+    bpy.utils.register_class(MoveVertexWeightsOperator)
     bpy.utils.register_class(NormalizeQuaternionRotationOperator)
     bpy.utils.register_class(ResetBezierHandlesOperator)
     bpy.utils.register_class(SelectLeftBezierHandlesOperator)
@@ -86,6 +88,7 @@ def unregister():
     bpy.utils.unregister_class(AverageVertexWeightsOperator)
     bpy.utils.unregister_class(CleanConstantChannelsOperator)
     bpy.utils.unregister_class(FindForgottenFcurvesOperator)
+    bpy.utils.unregister_class(MoveVertexWeightsOperator)
     bpy.utils.unregister_class(NormalizeQuaternionRotationOperator)
     bpy.utils.unregister_class(ResetBezierHandlesOperator)
     bpy.utils.unregister_class(SelectLeftBezierHandlesOperator)
