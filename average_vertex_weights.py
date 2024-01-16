@@ -26,6 +26,8 @@ def main(context: bpy.types.Context):
             group.add(indices, average, "REPLACE")
         bpy.ops.object.editmode_toggle()
 
+    mesh.free()
+
 
 class AverageVertexWeightsOperator(bpy.types.Operator):
     """Averages unlocked vertex weights for selected vertices in the active object"""
