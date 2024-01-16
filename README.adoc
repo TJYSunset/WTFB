@@ -36,3 +36,4 @@ Select Left/Right Bezier Handles:: Select all left/right handles of visible bezi
 === Misc
 
 Toggle Viewport Focal Length:: Toggle active viewport focal length between 35mm and 50mm.
+Toggle Viewport Shading:: Toggle active viewport shading between MatCap and flat + shadows + curvature.

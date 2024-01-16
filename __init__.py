@@ -15,12 +15,13 @@ from .clean_constant_channels import CleanConstantChannelsOperator
 from .find_forgotten_fcurves import FindForgottenFcurvesOperator
 from .normalize_quaternion_rotation import NormalizeQuaternionRotationOperator
 from .reset_bezier_handles import ResetBezierHandlesOperator
+from .save_history import save_history_register, save_history_try_unregister
 from .select_bezier_handles import (
     SelectLeftBezierHandlesOperator,
     SelectRightBezierHandlesOperator,
 )
 from .toggle_viewport_focal_length import ToggleViewportFocalLengthOperator
-from .save_history import save_history_register, save_history_try_unregister
+from .toggle_viewport_shading import ToggleViewportShadingOperator
 
 bl_info = {
     "name": "WTFB",
@@ -69,6 +70,7 @@ def register():
     bpy.utils.register_class(SelectLeftBezierHandlesOperator)
     bpy.utils.register_class(SelectRightBezierHandlesOperator)
     bpy.utils.register_class(ToggleViewportFocalLengthOperator)
+    bpy.utils.register_class(ToggleViewportShadingOperator)
 
     preferences = bpy.context.preferences.addons[__name__].preferences
 
@@ -86,6 +88,7 @@ def unregister():
     bpy.utils.unregister_class(SelectLeftBezierHandlesOperator)
     bpy.utils.unregister_class(SelectRightBezierHandlesOperator)
     bpy.utils.unregister_class(ToggleViewportFocalLengthOperator)
+    bpy.utils.unregister_class(ToggleViewportShadingOperator)
 
     unregister_handlers()
 
