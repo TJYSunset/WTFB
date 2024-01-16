@@ -15,17 +15,19 @@ def main(context: bpy.types.Context):
     if not indices:
         return
 
+    bpy.ops.object.mode_set(mode="OBJECT")
+
     for group in context.active_object.vertex_groups:
         if group.lock_weight:
             continue
 
         average = sum(try_get_weight(group, x) for x in indices) / len(indices)
 
-        bpy.ops.object.editmode_toggle()
         if average > 0:
             group.add(indices, average, "REPLACE")
-        bpy.ops.object.editmode_toggle()
 
+    bpy.ops.object.mode_set(mode="EDIT")
+    
     mesh.free()
 
 
