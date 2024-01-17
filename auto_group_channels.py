@@ -1,5 +1,6 @@
-import bpy
 import re
+
+import bpy
 
 
 def main(context):
