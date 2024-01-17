@@ -11,6 +11,7 @@ for name, module in sys.modules.copy().items():
         importlib.reload(module)
 
 from .auto_group_channels import AutoGroupChannelsOperator
+from .auto_pass_index import AutoPassIndexOperator
 from .average_vertex_weights import AverageVertexWeightsOperator
 from .clean_constant_channels import CleanConstantChannelsOperator
 from .find_forgotten_fcurves import FindForgottenFcurvesOperator
@@ -66,6 +67,7 @@ def register():
     bpy.utils.register_class(Preferences)
 
     bpy.utils.register_class(AutoGroupChannelsOperator)
+    bpy.utils.register_class(AutoPassIndexOperator)
     bpy.utils.register_class(AverageVertexWeightsOperator)
     bpy.utils.register_class(CleanConstantChannelsOperator)
     bpy.utils.register_class(FindForgottenFcurvesOperator)
@@ -87,6 +89,7 @@ def unregister():
     bpy.utils.unregister_class(Preferences)
 
     bpy.utils.unregister_class(AutoGroupChannelsOperator)
+    bpy.utils.unregister_class(AutoPassIndexOperator)
     bpy.utils.unregister_class(AverageVertexWeightsOperator)
     bpy.utils.unregister_class(CleanConstantChannelsOperator)
     bpy.utils.unregister_class(FindForgottenFcurvesOperator)
