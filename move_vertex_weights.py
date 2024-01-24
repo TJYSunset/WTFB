@@ -1,11 +1,6 @@
 import bpy
 
-
-def try_get_weight(group: bpy.types.VertexGroup, index: int):
-    try:
-        return group.weight(index)
-    except:
-        return 0.0
+from .utils.try_get_weight import try_get_weight
 
 
 def main(
@@ -21,14 +16,14 @@ def main(
 
     original_mode = context.object.mode
     bpy.ops.object.mode_set(mode="OBJECT")
-    
+
     for i in range(0, len(context.active_object.data.vertices)):
         source_weight = try_get_weight(source, i)
         if source_weight > 0:
             target.add([i], source_weight, "ADD")
         if not keep_source:
             source.remove([i])
-            
+
     bpy.ops.object.mode_set(mode=original_mode)
 
     return (True, f"Successfully moved {source_name} to {target_name}")

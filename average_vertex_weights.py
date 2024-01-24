@@ -3,12 +3,7 @@ import itertools
 import bmesh
 import bpy
 
-
-def try_get_weight(group: bpy.types.VertexGroup, index: int):
-    try:
-        return group.weight(index)
-    except:
-        return 0.0
+from .utils.try_get_weight import try_get_weight
 
 
 def main(context: bpy.types.Context):
