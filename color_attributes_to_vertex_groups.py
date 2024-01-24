@@ -9,10 +9,15 @@ def main(context: bpy.types.Context, lock: bool, regex: str) -> (int, int):
     success = 0
     skipped = 0
     compiled_regex = re.compile(regex)
-    for color_attribute in list(mesh.color_attributes):
-        regex_match = compiled_regex.match(color_attribute.name)
+    
+    # Workaround, or else accessing any of the attributes' properties might get invalid values. WTF?
+    names = list([x.name for x in mesh.color_attributes])
+    for color_attribute_name in names:
+        regex_match = compiled_regex.match(color_attribute_name)
         if regex_match is None:
             continue
+
+        color_attribute = mesh.color_attributes.get(color_attribute_name)
 
         if not isinstance(color_attribute, bpy.types.FloatColorAttribute):
             skipped += 1
@@ -22,13 +27,15 @@ def main(context: bpy.types.Context, lock: bool, regex: str) -> (int, int):
 
         old_vertex_group = obj.vertex_groups.get(vertex_group_name)
         if old_vertex_group is not None:
-            obj.vertex_groups.remove(vertex_group_name)
+            obj.vertex_groups.remove(old_vertex_group)
         vertex_group = obj.vertex_groups.new(name=vertex_group_name)
         vertex_group.lock_weight = lock
 
         for i, value in enumerate(color_attribute.data):
             vertex_group.add([i], value.color[0], "REPLACE")
 
+        # WTF #2
+        color_attribute = mesh.color_attributes.get(color_attribute_name)
         mesh.color_attributes.remove(color_attribute)
 
         success += 1

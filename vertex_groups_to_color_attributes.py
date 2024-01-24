@@ -21,7 +21,7 @@ def main(context: bpy.types.Context, locked: bool, unlocked: bool, prefix: str) 
 
         for i in range(0, len(obj.data.vertices)):
             weight = try_get_weight(group, i)
-            color_attribute.data[i].color = [weight, weight, weight, weight]
+            color_attribute.data[i].color = [weight, weight, weight, 1]
 
         obj.vertex_groups.remove(group)
 
