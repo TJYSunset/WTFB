@@ -44,8 +44,8 @@ Move Vertex Weights:: Add one vertex group to another, and optionally clears the
 ====
 No, that crap ignores vertices not influenced by the target group.
 ====
-Vertex Groups to Color Attributes & Color Attributes to Vertex Groups:: Batch convert vertex groups to color attributes (vertex colors) and vice versa. For your auto-normalization needs when rigging with non-deform groups or multiple armatures.
-WARNING: Might crash to desktop if you fiddle with the Adjust Last Operation panel too much. Save before running!
+[.line-through]#Vertex Groups to Color Attributes & Color Attributes to Vertex Groups#:: Batch convert vertex groups to color attributes (vertex colors) and vice versa. For your auto-normalization needs when rigging with non-deform groups or multiple armatures.
+NOTE: Temporarily removed because this seems to slightly corrupt the weights.
 
 === Misc
 

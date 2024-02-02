@@ -72,7 +72,7 @@ def register():
     bpy.utils.register_class(AutoPassIndexOperator)
     bpy.utils.register_class(AverageVertexWeightsOperator)
     bpy.utils.register_class(CleanConstantChannelsOperator)
-    bpy.utils.register_class(ColorAttributesToVertexGroupsOperator)
+    # bpy.utils.register_class(ColorAttributesToVertexGroupsOperator)
     bpy.utils.register_class(FindForgottenFcurvesOperator)
     bpy.utils.register_class(MoveVertexWeightsOperator)
     bpy.utils.register_class(NormalizeQuaternionRotationOperator)
@@ -82,7 +82,7 @@ def register():
     bpy.utils.register_class(ToggleRestPositionOperator)
     bpy.utils.register_class(ToggleViewportFocalLengthOperator)
     bpy.utils.register_class(ToggleViewportShadingOperator)
-    bpy.utils.register_class(VertexGroupsToColorAttributesOperator)
+    # bpy.utils.register_class(VertexGroupsToColorAttributesOperator)
 
     preferences = bpy.context.preferences.addons[__name__].preferences
 
@@ -96,7 +96,7 @@ def unregister():
     bpy.utils.unregister_class(AutoPassIndexOperator)
     bpy.utils.unregister_class(AverageVertexWeightsOperator)
     bpy.utils.unregister_class(CleanConstantChannelsOperator)
-    bpy.utils.unregister_class(ColorAttributesToVertexGroupsOperator)
+    # bpy.utils.unregister_class(ColorAttributesToVertexGroupsOperator)
     bpy.utils.unregister_class(FindForgottenFcurvesOperator)
     bpy.utils.unregister_class(MoveVertexWeightsOperator)
     bpy.utils.unregister_class(NormalizeQuaternionRotationOperator)
@@ -106,7 +106,7 @@ def unregister():
     bpy.utils.unregister_class(ToggleRestPositionOperator)
     bpy.utils.unregister_class(ToggleViewportFocalLengthOperator)
     bpy.utils.unregister_class(ToggleViewportShadingOperator)
-    bpy.utils.unregister_class(VertexGroupsToColorAttributesOperator)
+    # bpy.utils.unregister_class(VertexGroupsToColorAttributesOperator)
 
     unregister_handlers()
 
